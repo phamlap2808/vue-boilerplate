@@ -1,7 +1,6 @@
 import dayjs from '@/plugins/dayjs'
-import { ref } from 'vue'
 
-const datetimeFormat = ref('YYYY-MM-DD, HH:mm:ss')
+const datetimeFormat = 'YYYY-MM-DD, HH:mm:ss'
 export const OneMinute = 60
 export const OneHour = OneMinute * 60
 export const OneDay = OneHour * 24
@@ -12,19 +11,19 @@ export const isInvalidTime = (time: Date | string | number) =>
 // format LocalTime
 export const formatTime = (time: Date | string, format?: string) => {
   if (isInvalidTime(time)) return time as string
-  return dayjs(time).format(format || datetimeFormat.value)
+  return dayjs(time).format(format || datetimeFormat)
 }
 
 // get LocalTime
 export const getCurrDate = (format?: string) => {
-  return dayjs().format(format || datetimeFormat.value)
+  return dayjs().format(format || datetimeFormat)
 }
 
 // get time with timezone
 export const getCurrDateWithTimezone = (tz: string, format?: string) => {
   return dayjs()
     .tz(tz)
-    .format(format || datetimeFormat.value)
+    .format(format || datetimeFormat)
 }
 
 export const formatTimeWithTimezone = (
@@ -33,7 +32,7 @@ export const formatTimeWithTimezone = (
   format?: string,
 ) => {
   if (isInvalidTime(time)) return time as string
-  return dayjs.tz(time, tz).format(format || datetimeFormat.value)
+  return dayjs.tz(time, tz).format(format || datetimeFormat)
 }
 
 export const convertTimeFromNow = (

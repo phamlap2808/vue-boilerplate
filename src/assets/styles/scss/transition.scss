@@ -1,0 +1,27 @@
+.drawer-slide-y-enter-active,
+.drawer-slide-y-leave-active {
+  transition: all 0.3s ease;
+}
+
+.drawer-slide-y-enter-from,
+.drawer-slide-y-leave-to {
+  @apply translate-y-[100%] opacity-0 overflow-hidden;
+}
+
+.drawer-slide-x-enter-active,
+.drawer-slide-x-leave-active {
+  transition: all 0.3s ease;
+}
+
+.drawer-slide-x-enter-from,
+.drawer-slide-x-leave-to {
+  @apply translate-x-[100%] w-0 opacity-0 overflow-hidden;
+}
+
+.fade-in-enter-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-in-enter-from {
+  opacity: 0;
+}
