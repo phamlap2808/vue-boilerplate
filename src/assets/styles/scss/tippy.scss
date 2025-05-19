@@ -1,0 +1,9 @@
+.tippy-box {
+  .tippy-content:has([data-no-padding], [data-plain]) {
+    @apply p-0;
+  }
+
+  &:has([data-plain]) {
+    @apply bg-transparent shadow-none;
+  }
+}
