@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import LayoutWrapper from '@/components/LayoutWrapper.vue'
-import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <LayoutWrapper />
-  <VueQueryDevtools />
+  <HelloWorld />
 </template>
